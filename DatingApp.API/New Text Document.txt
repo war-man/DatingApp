@@ -1,0 +1,5 @@
+what this Project Template Can Provide You?
+	
+
+Use InterFaces
+Use Generic Repositories

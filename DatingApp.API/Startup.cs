@@ -39,7 +39,8 @@ namespace DatingApp.API
             services.AddCors();
             services.AddControllers();
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value);
-            
+            services.AddScoped<IAuthRepository,AuthRepository>();
+            services.AddScoped<IDatingRepository,DatingRepository>();
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -57,7 +58,7 @@ namespace DatingApp.API
                         ValidateAudience = false
                     };
                 });
-            services.AddScoped<IAuthRepository,AuthRepository>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
