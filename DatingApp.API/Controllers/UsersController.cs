@@ -45,7 +45,7 @@ namespace DatingApp.API.Controllers
             {
                 return Unauthorized();
             }
-            
+            return Ok();
         }
         
     }
