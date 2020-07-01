@@ -19,6 +19,7 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Diagnostics;
 using DatingApp.API.Helpers;
+using AutoMapper;
 
 namespace DatingApp.API
 {
@@ -37,6 +38,7 @@ namespace DatingApp.API
             services.AddDbContext<DataContext>(x=>x.UseSqlite
                     (Configuration.GetConnectionString("DefaultConnection")));
             services.AddCors();
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value);
             services.AddScoped<IAuthRepository,AuthRepository>();
