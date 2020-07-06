@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
     if (this.authService.loggedIn()) {
     return true;
     }
-    this.alertify.error('Not Allowed To Use Route To Navigate');
+    this.alertify.error('You can\'t access this link before login');
     this.router.navigate(['/home']);
     return false;
   }
