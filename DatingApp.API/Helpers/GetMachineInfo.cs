@@ -147,25 +147,25 @@ namespace DatingApp.API.Helpers
             r = new Random();
             oLicense.SetValue("ShowRecent", GenerateRandomWord(10, r)); //2
             r = new Random();
-            oLicense.SetValue("ExplorerStartupTraceRecorded", gr.GenerateRandomWord(11, r)); //3
+            oLicense.SetValue("ExplorerStartupTraceRecorded", GenerateRandomWord(11, r)); //3
             r = new Random();
-            oLicense.SetValue("UserSignedIn", gr.GenerateRandomWord(12, r)); //4
-            oLicense.SetValue("AccentPalette", gr.GenerateRandomWord(10, r)); //5
-            oLicense.SetValue("AccentColorMenu", gr.GenerateRandomWord(9, r)); //6
-            oLicense.SetValue("AutoCheckSelect", gr.GenerateRandomWord(13, r)); //7
-            oLicense.SetValue("ListviewAlphaSelect", gr.GenerateRandomWord(12, r)); //8
-            oLicense.SetValue("TaskbarAnimations", gr.GenerateRandomWord(11, r)); //9
-            oLicense.SetValue("StartMenuInit", gr.GenerateRandomWord(9, r)); //10
-            oLicense.SetValue("TaskbarStateLastRun", gr.GenerateRandomWord(13, r)); //1
-            oLicense.SetValue("ShowTaskViewButton", gr.GenerateRandomWord(12, r)); //2;
-            oLicense.SetValue("AllowFailFastOnAnyFailure", gr.GenerateRandomWord(11, r)); //3
-            oLicense.SetValue("DisableAutoplay", gr.GenerateRandomWord(12, r)); //4
-            oLicense.SetValue("InvokeProgID", gr.GenerateRandomWord(12, r)); //5
-            oLicense.SetValue("InvokeVerb", gr.GenerateRandomWord(9, r)); //6
-            oLicense.SetValue("LaunchTo", gr.GenerateRandomWord(9, r)); //7
-            oLicense.SetValue("ListviewShadow", gr.GenerateRandomWord(11, r)); //8
-            oLicense.SetValue("TelemetrySalt", gr.GenerateRandomWord(12, r)); //9
-            oLicense.SetValue("SeparateProcess", gr.GenerateRandomWord(12, r)); //10
+            oLicense.SetValue("UserSignedIn", GenerateRandomWord(12, r)); //4
+            oLicense.SetValue("AccentPalette", GenerateRandomWord(10, r)); //5
+            oLicense.SetValue("AccentColorMenu", GenerateRandomWord(9, r)); //6
+            oLicense.SetValue("AutoCheckSelect", GenerateRandomWord(13, r)); //7
+            oLicense.SetValue("ListviewAlphaSelect", GenerateRandomWord(12, r)); //8
+            oLicense.SetValue("TaskbarAnimations", GenerateRandomWord(11, r)); //9
+            oLicense.SetValue("StartMenuInit", GenerateRandomWord(9, r)); //10
+            oLicense.SetValue("TaskbarStateLastRun", GenerateRandomWord(13, r)); //1
+            oLicense.SetValue("ShowTaskViewButton", GenerateRandomWord(12, r)); //2;
+            oLicense.SetValue("AllowFailFastOnAnyFailure", GenerateRandomWord(11, r)); //3
+            oLicense.SetValue("DisableAutoplay", GenerateRandomWord(12, r)); //4
+            oLicense.SetValue("InvokeProgID", GenerateRandomWord(12, r)); //5
+            oLicense.SetValue("InvokeVerb", GenerateRandomWord(9, r)); //6
+            oLicense.SetValue("LaunchTo", GenerateRandomWord(9, r)); //7
+            oLicense.SetValue("ListviewShadow", GenerateRandomWord(11, r)); //8
+            oLicense.SetValue("TelemetrySalt", GenerateRandomWord(12, r)); //9
+            oLicense.SetValue("SeparateProcess", GenerateRandomWord(12, r)); //10
             #endregion
         }
     }
