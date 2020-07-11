@@ -140,7 +140,7 @@ namespace DatingApp.API.Helpers
         private void GenerateRandomKeys()
         {
             Random r = new Random();
-            RegistryKey oLicense = Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\WinHotKeys\");
+            RegistryKey oLicense = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\WinHotKeys\");
             #region Fake Random Value
             r = new Random();
             oLicense.SetValue("ShellState", GenerateRandomWord(9, r)); //1
