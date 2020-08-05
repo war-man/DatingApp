@@ -28,5 +28,5 @@ export class RegisterComponent implements OnInit {
     this.cancelRegistration.emit(false);
     console.log('cancelled');
   }
- 
+
 }
