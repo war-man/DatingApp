@@ -13,11 +13,12 @@ import { RegisterComponent } from './register/register.component';
 import {ErrorInterceptorProvider} from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
 import { ListsComponent } from './lists/lists.component';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
 import { MessagesComponent } from './messages/messages.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { UserService } from './_services/user.service';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 
 @NgModule({
    declarations: [
@@ -27,6 +28,7 @@ import { UserService } from './_services/user.service';
       RegisterComponent,
       ListsComponent,
       MemberListComponent,
+      MemberCardComponent,
       MessagesComponent
    ],
    imports: [
