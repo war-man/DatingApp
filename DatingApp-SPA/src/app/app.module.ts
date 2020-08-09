@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -22,6 +23,8 @@ import { appRoutes } from './routes';
 import { UserService } from './_services/user.service';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailsComponent } from './members/member-details/member-details.component';
+import { MemberDetailResolver } from './_resolvers/member-detail-resolver';
+import { MemberListResolver } from './_resolvers/member-list-resolver';
 
 
 export function tokenGetter(){
@@ -44,6 +47,7 @@ export function tokenGetter(){
       HttpClientModule,
       FormsModule,
       BrowserAnimationsModule,
+      NgxGalleryModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
@@ -59,10 +63,15 @@ export function tokenGetter(){
       AuthService,
       ErrorInterceptorProvider,
       AlertifyService,
-      UserService
+      UserService,
+      MemberDetailResolver,
+      MemberListResolver
    ],
    bootstrap: [
       AppComponent
-   ]
+   ],
+   schemas: [
+      CUSTOM_ELEMENTS_SCHEMA
+    ]
 })
 export class AppModule { }
