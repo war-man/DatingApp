@@ -7,7 +7,7 @@ namespace DatingApp.API.Helpers
 {
     public static class Encryption
     {
-                public static string Encrypt(string clearText)
+        public static string Encrypt(string clearText)
         {
             string EncryptionKey = "sharafwadajaddit";
             byte[] clearBytes = Encoding.Unicode.GetBytes(clearText);

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { UserService } from './_services/user.service';
 import { MemberCardComponent } from './members/member-card/member-card.component';
+import { MemberDetailsComponent } from './members/member-details/member-details.component';
 
 
 export function tokenGetter(){
@@ -34,6 +36,7 @@ export function tokenGetter(){
       ListsComponent,
       MemberListComponent,
       MemberCardComponent,
+      MemberDetailsComponent,
       MessagesComponent
    ],
    imports: [
@@ -42,6 +45,7 @@ export function tokenGetter(){
       FormsModule,
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
+      TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
          config: {
