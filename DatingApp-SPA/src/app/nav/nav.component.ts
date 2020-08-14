@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import {AlertifyService} from '../_services/alertify.service';
 import {Router} from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { Globals } from '../globals';
 
 
 @Component({
@@ -11,11 +13,30 @@ import {Router} from '@angular/router';
 })
 export class NavComponent implements OnInit {
   model: any = {};
+  textDir: string = 'rtl';
+  @Output() globalTextDir: EventEmitter<string> = new EventEmitter();
 
   constructor(public authService: AuthService, private alertifyService: AlertifyService,
-              private route: Router) { }
+              private route: Router,public translate: TranslateService,private globals: Globals
+              ) {
+                translate.addLangs(['en', 'ar']);
+                translate.setDefaultLang('ar');
+               }
 
   ngOnInit() {
+    this.switchLang('ar');
+  }
+  switchLang(lang: string) {
+    this.translate.use(lang);
+    if(lang == 'ar')
+    {
+      this.textDir = 'rtl';
+    } 
+    else
+    {
+      this.textDir = 'ltr';
+    }
+    this.globals.textDir= this.textDir;
   }
 
   login() {

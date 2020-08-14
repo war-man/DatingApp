@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <div class="row">
-        <h1>{{user.knownAs}} {{'Memeber-details-profile'|translate}}</h1>
+        <h1>Your Profile</h1>
     </div>
     <div class="row">
         <div class="col-sm-4">
@@ -35,23 +35,27 @@
         <div class="col-sm-8">
             <div class="tab-panel">
                 <tabset>
-                    <tab heading="About {{user.knownAs}}">
+                    <tab heading="Edit Profile">
                         <h4>Description</h4>
-                        <p>{{user.introduction}}</p>
+                        <textarea name="introduction" rows="6" class="form-control"
+                        [(ngModel)] = "user.introduction"></textarea>
                         <h4>Looking For</h4>
-                        <p>{{user.lookingFor}}</p>
-                    </tab>
-                    <tab heading="Interests">
+                        <textarea name="lookingFor" rows="6" class="form-control"
+                        [(ngModel)] = "user.lookingFor"></textarea>
                         <h4>Interests</h4>
-                        <p>{{user.interests}}</p>
+                        <textarea name="Interests" rows="6" class="form-control"
+                        [(ngModel)] = "user.interests"></textarea>
+                        <h4>Location Details:</h4>
+                        <div class="form-inline">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" name="city" [(ngModel)]="user.city">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
+                        </div>
                     </tab>
-                    <tab heading="Photos">
+                    <tab heading="Edit Photos">
                         <h4>Photos</h4>
-                        <ngx-gallery style="display: inline-block; margin-bottom: 20px;" [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
-                    </tab>
-                    <tab heading="Messages">
-                        <h4>Messages</h4>
-                        <p>Messages will be here</p>
+                        <p>Photos will edit here</p>                    
                     </tab>
                 </tabset>
             </div>

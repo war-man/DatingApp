@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
+  globals: Globals;
 
   values: any;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,globals: Globals) {
+    this.globals = globals;
+   }
 
   ngOnInit() {
     this.getValues();

@@ -49,3 +49,8 @@
     border-top: 1px solid #eee;
     padding: 15px 0;
   }
+  * {
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'ABeeZee', cursive;
+  }
