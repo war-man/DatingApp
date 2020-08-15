@@ -2,6 +2,8 @@
     "a-login":"Login",
     "a-UserName":"UserName",
     "a-Password":"Password",
+    "a-Arabic":"Arabic",
+    "a-English":"English",
     "Sitetitle": "Angular Multi Language Site",
     "home-title":"Welcome In Angular App",
     "home-slogan":"Come on in to start your business right... All you need to do is sign up!",
