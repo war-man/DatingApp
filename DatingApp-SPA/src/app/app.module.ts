@@ -31,6 +31,8 @@ import { MemberEditResolver } from './_resolvers/member-edit-resolver';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Globals } from './globals';
+import { AuthGuard } from './_guards/auth.guard';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 
 export function tokenGetter(){
    return localStorage.getItem('token');
@@ -74,12 +76,14 @@ export function tokenGetter(){
    ],
    providers: [
       AuthService,
+      AuthGuard,
       ErrorInterceptorProvider,
       AlertifyService,
       UserService,
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
+      PreventUnsavedChanges,
       Globals
    ],
    bootstrap: [
